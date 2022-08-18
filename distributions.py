@@ -95,6 +95,7 @@ def metrics_fixed_bin_distribution(control, variable, perc_step=5):
     p_value = 1 - stats.t.cdf(t_value,df=df)
 
     # Perform the linear regression.
+    distribution_control_fb, distribution_fb = distribution_control_fb[(~np.isnan(distribution_control_fb))&(~np.isnan(distribution_fb))], distribution_fb[(~np.isnan(distribution_control_fb))&(~np.isnan(distribution_fb))]
     lsq_res = stats.linregress(distribution_control_fb, distribution_fb)
     slope = lsq_res[0]
     intercept = lsq_res[1]
