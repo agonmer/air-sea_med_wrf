@@ -100,6 +100,8 @@ def metrics_fixed_bin_distribution(control, variable, perc_step=5):
     lsq_res = stats.linregress(distribution_control_fb, distribution_fb)
     slope = lsq_res[0]
     intercept = lsq_res[1]
+    rvalue = lsq_res[2]
+    p_slope = lsq_res[3]
 
     return slope, intercept, sr_distr, p_value, distribution_control_fb, distribution_fb, std_distribution_fb
 
