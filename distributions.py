@@ -620,4 +620,4 @@ def mixed_distribution_with_hist_two_samples(control1, variable1, control2, vari
         plt.savefig('./figures/'+figure_name,bbox_inches='tight') 
 
     return sr_distr, p_value
-Footer
+
